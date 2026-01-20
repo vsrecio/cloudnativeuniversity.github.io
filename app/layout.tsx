@@ -1,28 +1,32 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import TemplateScripts from "@/components/TemplateScripts";
-
-export const metadata: Metadata = {
-  title: "Cloud Native University",
-  description: "Cloud Native University",
-  icons: { icon: "/assets/img/favicon.ico" },
-};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <head>
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/assets/css/animate.min.css" />
-        <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
-        <link rel="stylesheet" href="/assets/css/meanmenu.css" />
-        <link rel="stylesheet" href="/assets/css/slick.css" />
-        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="/assets/css/icofont.min.css" />
-        <link rel="stylesheet" href="/assets/css/plugins_plyr.css" />
-        <link rel="stylesheet" href="/assets/css/style.css" />
-        <link rel="stylesheet" href="/assets/css/responsive.css" />
-      </head>
+    <head>
+      {/* Base */}
+      <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+
+      {/* Icon fonts / packs (si tu CSS los usa) */}
+      <link rel="stylesheet" href="/assets/elagent-icon/style.css" />
+      <link rel="stylesheet" href="/assets/ionicons/css/ionicons.min.css" />
+
+      {/* Plugins CSS comunes */}
+      <link rel="stylesheet" href="/assets/slick/slick.css" />
+      <link rel="stylesheet" href="/assets/slick/slick-theme.css" />
+      <link rel="stylesheet" href="/assets/swiper-slider/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="/assets/magnify-pop/magnific-popup.css" />
+      <link rel="stylesheet" href="/assets/niceselectpicker/nice-select.css" />
+      <link rel="stylesheet" href="/assets/mcustomscrollbar/jquery.mCustomScrollbar.min.css" />
+      <link rel="stylesheet" href="/assets/player-js/plyr.css" />
+      <link rel="stylesheet" href="/assets/animation/animate.css" />
+
+      {/* Tu theme al final */}
+      <link rel="stylesheet" href="/assets/css/style-main.css" />
+      <link rel="stylesheet" href="/assets/css/responsive.css" />
+    </head>
+
       <body>
         {children}
         <TemplateScripts />
@@ -30,4 +34,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-

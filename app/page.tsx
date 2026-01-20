@@ -1,25 +1,24 @@
-import Link from "next/link";
+"use client";
 
 export default function HomePage() {
   return (
     <div className="body_wrapper">
       <nav className="navbar navbar-expand-lg menu_one menu_purple sticky-nav">
         <div className="container">
-          <Link className="navbar-brand header_logo" href="/">
-            {/* Ajusta rutas según tu estructura real */}
+          <a className="navbar-brand header_logo" href="/">
             <img
               className="first_logo sticky_logo"
-              src="/img/logo.png"
-              srcSet="/img/logo-2x.png 2x"
+              src="/assets/img/logo.png"
+              srcSet="/assets/img/logo-2x.png 2x"
               alt="logo"
             />
             <img
               className="white_logo main_logo"
-              src="/img/logo.png"
-              srcSet="/img/logo-w2x.png 2x"
+              src="/assets/img/logo.png"
+              srcSet="/assets/img/logo-w2x.png 2x"
               alt="logo"
             />
-          </Link>
+          </a>
 
           <button
             className="navbar-toggler collapsed"
@@ -32,13 +31,13 @@ export default function HomePage() {
           >
             <span className="menu_toggle">
               <span className="hamburger">
-                <span />
-                <span />
-                <span />
+                <span></span>
+                <span></span>
+                <span></span>
               </span>
               <span className="hamburger-cross">
-                <span />
-                <span />
+                <span></span>
+                <span></span>
               </span>
             </span>
           </button>
@@ -46,34 +45,34 @@ export default function HomePage() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav menu ml-auto">
               <li className="nav-item dropdown submenu">
-                <Link href="/" className="nav-link">
+                <a href="/" className="nav-link">
                   Inicio
-                </Link>
+                </a>
               </li>
               <li className="nav-item dropdown submenu">
-                <Link href="/cursos" className="nav-link">
+                <a href="/cursos" className="nav-link">
                   Cursos
-                </Link>
+                </a>
               </li>
               <li className="nav-item dropdown submenu">
-                <Link href="/blog" className="nav-link">
+                <a href="/blog" className="nav-link">
                   Blog
-                </Link>
+                </a>
               </li>
               <li className="nav-item dropdown submenu">
-                <Link href="/comunidad" className="nav-link">
+                <a href="/comunidad" className="nav-link">
                   Comunidad
-                </Link>
+                </a>
               </li>
               <li className="nav-item dropdown submenu">
-                <Link href="/patrocinadores" className="nav-link">
+                <a href="/patrocinadores" className="nav-link">
                   Patrocinadores
-                </Link>
+                </a>
               </li>
               <li className="nav-item dropdown submenu">
-                <Link href="/enterprise" className="nav-link">
+                <a href="/enterprise" className="nav-link">
                   Enterprise
-                </Link>
+                </a>
               </li>
             </ul>
 
@@ -114,9 +113,9 @@ export default function HomePage() {
               alt=""
             />
           </li>
-          <li />
-          <li />
-          <li />
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
 
         <div className="container">
@@ -125,15 +124,19 @@ export default function HomePage() {
               Todo el conocimiento Cloud Native que necesitas en español
             </h2>
             <p className="wow fadeInUp" data-wow-delay="0.2s">
-              {" "}
-              Acceso ilimitado,{"{GRATIS}"} Cero Excusas.{" "}
+              Acceso ilimitado,{"{GRATIS}"} Cero Excusas.
             </p>
           </div>
         </div>
       </section>
 
       <section className="doc_features_area">
-        <img className="doc_features_shap" src="/assets/img/new/shap_white.png" alt="" />
+        <img
+          className="doc_features_shap"
+          src="/assets/img/new/shap_white.png"
+          alt=""
+        />
+
         <div className="container">
           <div className="doc_features_inner">
             <div
@@ -169,8 +172,8 @@ export default function HomePage() {
               data-wow-delay="0.1s"
               data-wow-duration="0.5s"
             >
-              {/* OJO: en tu HTML original esto es assets/img/new/.png, eso es inválido */}
-              <img src="/assets/img/new/placeholder.png" alt="" />
+              {/* OJO: en tu HTML original esto era img/new/.png (archivo inválido). */}
+              <img src="/assets/img/new/app.png" alt="" />
               <div className="media-body">
                 <a href="#">
                   <h4>App &amp; Image Build</h4>
@@ -406,7 +409,7 @@ export default function HomePage() {
             </div>
 
             <a href="#more-features" className="collapse-btn see_btn">
-              <i className="arrow_carrot-down_alt2" />
+              <i className="arrow_carrot-down_alt2"></i>
               <span className="text">Ver Mas!</span>
             </a>
           </div>
@@ -432,13 +435,13 @@ export default function HomePage() {
             </ul>
 
             <p className="wow fadeInUp" data-wow-delay="0.3s">
-              © {new Date().getFullYear()} All Rights Reserved Design by <span>Nixversity</span>
+              © <span id="currentYear"></span> All Rights Reserved Design by <span>Nixversity</span>
             </p>
           </div>
         </div>
       </footer>
 
-      <a id="back-to-top" title="Back to Top" />
+      <a id="back-to-top" title="Back to Top"></a>
     </div>
   );
 }
